@@ -105,7 +105,7 @@ fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
         singleLine = true,
         shape = MaterialTheme.shapes.large,
         modifier = Modifier.fillMaxWidth(),
-        label = {Text(text = "Nama lengkap")},
+        label = {Text(text = "Username")},
         onValueChange = {
             textNama = it
         }
@@ -126,7 +126,7 @@ fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
         singleLine = true,
         shape = MaterialTheme.shapes.large,
         modifier = Modifier.fillMaxWidth(),
-        label = {Text(text = "Alamat")},
+        label = {Text(text = "Email")},
         onValueChange = {
             textAlt = it
         }
@@ -150,7 +150,7 @@ fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
         namanya = cobaViewModel.namaUsr,
         teleponnya = cobaViewModel.noTelp,
         jenisnya = cobaViewModel.jenisKL,
-        alamatnya = cobaViewModel.alamat
+        alamatnya = cobaViewModel.email
 
     )
 }

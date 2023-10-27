@@ -2,5 +2,7 @@
     <string name="app_name">ViewModel</string>
     <string name="laki">Laki-Laki</string>
     <string name="wanita">Perempuan</string>
+    <string name="radio1">Menikah</string>
+    <string name="radio2">Belum Menikah</string>
     <string name="submit">Submit</string>
 </resources>
