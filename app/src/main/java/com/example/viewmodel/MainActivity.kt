@@ -35,12 +35,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.viewmodel.DataSource.jenis
 import com.example.viewmodel.ui.theme.ViewModelTheme
+import org.w3c.dom.Text
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -88,6 +90,7 @@ fun TampilLayout(modifier: Modifier = Modifier) {
 @Composable
 fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
 
+
     var textNama by remember { mutableStateOf("")}
     var textTlp by remember { mutableStateOf("")}
     var textAlt by remember { mutableStateOf("")}
@@ -97,6 +100,13 @@ fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
     val uiState by cobaViewModel.uiState.collectAsState()
     dataForm = uiState;
 
+    Column {
+        Text(
+            text = "Register",
+            fontSize = 15.sp,
+            textAlign = TextAlign.Center
+        )
+    }
     OutlinedTextField(
         value = textNama,
         singleLine = true,
