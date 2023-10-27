@@ -106,6 +106,12 @@ fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
             fontSize = 15.sp,
             textAlign = TextAlign.Center
         )
+        Text(
+            text = "Create Your Account",
+            fontSize = 35.sp,
+            textAlign = TextAlign.Center
+
+        )
     }
     OutlinedTextField(
         value = textNama,
