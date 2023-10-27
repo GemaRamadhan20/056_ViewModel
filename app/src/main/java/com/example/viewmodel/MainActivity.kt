@@ -1,7 +1,6 @@
 package com.example.viewmodel
 
 import android.os.Bundle
-import android.view.View
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
@@ -39,9 +38,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.viewmodel.DataSource.jenis
 import com.example.viewmodel.ui.theme.ViewModelTheme
 
@@ -137,7 +134,7 @@ fun TampilForm(cobaViewModel: CobaViewModel = viewModel()){
     Button(
         modifier = Modifier.fillMaxWidth(),
         onClick = {
-            cobaViewModel.insertData(textNama,textTlp, dataForm.sex, textAlt)
+            cobaViewModel.insertData(textNama,textTlp, dataForm.sex, dataForm.st, textAlt)
         }
     ) {
         Text(
